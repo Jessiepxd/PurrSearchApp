@@ -29,7 +29,7 @@
 1. **Search Path and Term History**  
    - On startup, the app will display the latest search path and term.  
    - For first-time users, these fields will be blank.
-   ![Step 1](images/search_path_and_history.png)
+   ![Step 1](readme_images/search_path_and_history.png)
 
 2. **Choosing a Folder**  
    - Click the **Browse** button to select a folder for the search.  
@@ -38,7 +38,7 @@
 3. **Search Term**  
    - Enter the text you want to search for.  
    - Use the dropdown menu to access past search terms or clear the search history.
-   ![Step 3](images/enter_search_term.png)  
+   ![Step 3](readme_images/enter_search_term.png)  
 
 4. **Start Search**  
    - Click the **Search** button to initiate the search.  
@@ -46,30 +46,30 @@
      - Total number of files being searched.
      - Breakdown of file types being searched.
      - Search results.
-   ![Step 4](images/search_progress.PNG)  
+   ![Step 4](readme_images/search_progress.PNG)  
 
 5. **View Results**  
    - Files containing the search term will be displayed in the results window.  
    - **Right-click** a file in the results to:
      - Open the file (**Open File**).
      - Open the file's location in your file explorer (**Open Path**).
-   ![Step 5](images/open_file_open_path.png)  
+   ![Step 5](readme_images/open_file_open_path.png)  
 
 6. **Interrupt Search**  
    - Click the **Stop** button to halt the search at any time.
-   ![Step 6](images/stop_search.PNG)  
+   ![Step 6](readme_images/stop_search.PNG)  
 
 7. **Export Results**  
    - After the search is complete, click the **Export** button to save the results to an Excel file.
-   ![Step 7](images/export_results.PNG)  
+   ![Step 7](readme_images/export_results.PNG)  
 
 8. **Start New Search**  
    - Initiating a new search will automatically clear the results from the previous search.
-   ![Step 8](images/new_search.PNG)  
+   ![Step 8](readme_images/new_search.PNG)  
 
 9. **Help & Version Info**  
    - Click **About** or press **F1** to view the app's version details.
-   ![Step 9](images/about_and_help.PNG)  
+   ![Step 9](readme_images/about_and_help.PNG)  
 
 10. **Keyboard Navigation**  
     - Use the **Tab** key to navigate through the app's interface.
