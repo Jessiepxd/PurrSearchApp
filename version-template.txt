@@ -1,0 +1,92 @@
+# Microsoft VersionInfo Template. Definitions are in WinVer.h
+# https://docs.microsoft.com/en-us/windows/desktop/menurc/versioninfo-resource
+#
+# The following keywords are bytes (0-255). Use 0 if not needed.
+#   fileMajor, fileMinor, fileMicro, fileBuild
+#   prodMajor, prodMinor, prodMicro, prodBuild
+# The following strings can be defined:
+#   comments            Information for diagnostic purposes (OPTIONAL).
+#   companyName         Company that produced the file (REQUIRED).
+#   fileDescription     File description to be presented to users (REQUIRED).
+#   fileVersion         Version number of the file e.g. "3.10" (REQUIRED).
+#   internalName        Internal name of the file, if one exists If the file 
+#                       has no internal name, this string should be the
+#                       original filename, without extension (REQUIRED).
+#   legalCopyright      Copyright notices that apply to the file. This should
+#                       include the full text of all notices, legal symbols,
+#                       copyright dates, and so on (OPTIONAL).
+#   legalTrademarks     Trademarks and registered trademarks that apply to the
+#                       file. This should include the full text of all notices,
+#                       legal symbols, trademark numbers, and so on (OPTIONAL).
+#   originalFilename    Original name of the file, not including a path. This
+#                       information enables an application to determine whether
+#                       a file has been renamed by a user. The format of the
+#                       name depends on the file system for which the file was
+#                       created (REQUIRED).
+#   productName         Name of the product with which the file is distributed
+#                       (REQUIRED).
+#   productVersion      Version of the product with which the file is
+#                       distributed e.g. "3.10" or "5.00.RC2" (REQUIRED).
+
+VSVersionInfo(
+  ffi=FixedFileInfo(
+    # Binary version number of the file. Two 32-bit integers specified as
+    # 4-tuples. Set not needed items to zero 0.
+    filevers=(${fileMajor}, ${fileMinor}, ${fileMicro}, ${fileBuild}),
+    prodvers=(${prodMajor}, ${prodMinor}, ${prodMicro}, ${prodBuild}),
+
+    # File flags specify if this is a special release.
+    # 'mask' contains a bitmask that specifies which bits of 'flags' are valid.
+    mask=0x3f,
+    # VS_FF_DEBUG=0x01, VS_FF_PRERELEASE=0x02, VS_FF_PATCHED=0x04,
+    # VS_FF_PRIVATEBUILD=0x08, VS_FF_INFOINFERRED=0x10, VS_FF_SPECIALBUILD=0x20
+    flags=0x0,
+
+    # Operating system for which this file was designed.
+    # VOS_UNKNOWN=0x00, VOS_DOS=0x10000, VOS_OS216=0x00020000,
+    # VOS_OS232=0x00030000, VOS_NT=0x00040000, VOS_WINCE=0x00050000
+    # Obsolete flags:
+    # VOS_WINDOWS16=0x01, VOS_PM16=0x02, VOS_PM32=0x03, VOS_WINDOWS32=0x04
+    # Modern Flags:
+    # VOS_DOS_WINDOWS16=0x00010001, VOS_DOS_WINDOWS32=0x00010004
+    # VOS_OS216_PM16=0x00020002, VOS_OS232_PM32=0x00030003,
+    # VIS_NT_WINDOWS32=0x00040004 (should always be used)
+    OS=0x40004,
+
+    # General type of file.
+    # VFT_UNKNOWN=0x00, VFT_APP=0x01 (default), VFT_DLL=0x02, VFT_DRV=0x03,
+    # VFT_FONT=0x04, VFT_VXD=0x05, VFT_STATIC_LIB=0x07
+    fileType=0x1,
+
+    # Function of the file. It is zero unless filetype is VFT_DRV, VFT_FONT, or VFT_VXD.
+    # VFT2_UNKNOWN=0x00, VFT2_DRV_PRINTER=0x01, VFT2_DRV_KEYBOARD=0x02,
+    # VFT2_DRV_LANGUAGE=0x03, VFT2_DRV_DISPLAY=0x04, VFT2_DRV_MOUSE=0x05,
+    # VFT2_DRV_NETWORK=0x06, VFT2_DRV_SYSTEM=0x07, VFT2_DRV_INSTALLABLE=0x08,
+    # VFT2_DRV_SOUND=0x09, VFT2_DRV_COMM=0x0A, VFT2_DRV_INPUTMETHOD=0x0B,
+    # VFT2_DRV_VERSIONED_PRINTER=0x0C
+    subtype=0x0,
+    
+    # Unknown?
+    date=(0, 0)
+    ),
+  kids=[
+    StringFileInfo(
+      [
+      StringTable(
+        # langId=0x0409 (U.S. English), charsetId=0x04B0 (Unicode)
+        u'040904B0',
+        [#StringStruct(u'Comments', u'${comments}'),
+         StringStruct(u'CompanyName', u'${companyName}'),
+         StringStruct(u'FileDescription', u'${fileDescription}'),
+         StringStruct(u'FileVersion', u'${fileVersion}'),
+         StringStruct(u'InternalName', u'${internalName}'),
+         StringStruct(u'LegalCopyright', '${legalCopyright}'),
+         #StringStruct(u'LegalTrademarks', '${legalTrademarks}'),
+         StringStruct(u'OriginalFilename', u'${originalFilename}'),
+         StringStruct(u'ProductName', u'${productName}'),
+         StringStruct(u'ProductVersion', u'${productVersion}')])
+      ]), 
+    # Modify for localized versions. [langId, charsetId]. 
+    VarFileInfo([VarStruct(u'Translation', [0x0409, 0x04b0])])
+  ]
+)

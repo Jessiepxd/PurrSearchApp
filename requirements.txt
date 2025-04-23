@@ -1,0 +1,27 @@
+# Document libraries:
+docx2python==3.5.0                  # Python library to extract content from .docx files
+   lxml>=4.9.2                     # XML processing library used by docx2python
+   paragraphs>=0.1.0               # Text paragraph processing for docx2python
+   types-lxml>=0.12.0              # Type annotations for lxml
+   typing_extensions>=4.0.0        # Backport of typing features from newer Python versions
+
+openpyxl==3.1.5                     # Library for reading/writing Excel 2010+ files
+   et-xmlfile>=1.1.0               # Low memory library for creating large XML files
+
+PyMuPDF==1.25.5                     # Python binding for MuPDF (PDF processing)
+
+vsdx==0.5.19                        # Library for parsing Visio files
+   deprecation>=2.1.0              # Library for handling deprecation warnings
+   Jinja2>=3.0.0                   # Template engine used by vsdx
+
+python-docx=1.1.2                   # Create and update Microsoft Word .docx files
+   lxml>=4.9.2                     # XML processing library used by python-docx
+   typing-extensions>=4.0.0        # Backport of typing features for python-docx
+
+xlrd==2.0.1                         # Library for reading data from Excel files
+
+defusedxml==0.7.1                   # XML parser that prevents XML vulnerabilities
+
+# GUI:
+wxPython==4.2.2                     # Cross-platform GUI toolkit
+   six>=1.16.0                     # Python 2 and 3 compatibility library
