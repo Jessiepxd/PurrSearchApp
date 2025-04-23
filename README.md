@@ -17,7 +17,7 @@
 ### **Installation**
 1. **Download**  
    Download the latest version of `PurrSearch.exe` from the following link:  
-   [Download PurrSearch v3.9.5](http://stash/projects/DVG/repos/purrsearch/browse/release/v3.9.5/dist)
+   [Download PurrSearch v3.9.9](https://github.com/Jessiepxd/PurrSearchApp/tree/6329faad87d41fc388d2fee8437b55c4c1d4c459/dist)
 
 2. **Start the Application**  
    Double-click the downloaded file to start the app.
