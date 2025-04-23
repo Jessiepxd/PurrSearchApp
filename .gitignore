@@ -1,7 +1,7 @@
-# .vscode/
-# release/v3.9.9/__pycache__/
-# release/v3.9.9/build/
-# release/v3.9.9/dist/
-# release/v3.9.5/__pycache__/
-# release/v3.9.5/build/
-# release/v3.9.5/dist/
+.vscode/
+release/v3.9.9/__pycache__/
+release/v3.9.9/build/
+release/v3.9.9/dist/
+release/v3.9.5/__pycache__/
+release/v3.9.5/build/
+release/v3.9.5/dist/
