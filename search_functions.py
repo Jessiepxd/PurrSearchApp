@@ -196,16 +196,34 @@ def mbcs_search(file_path, text):
 
     return matches
 
+# def combined_search(file_path, text):
+#     """Perform both mbcs_search and binary_search on the file."""
+#     matches_mbcs = mbcs_search(file_path, text)
+#     matches_binary = binary_search(file_path, text)
+
+#     # Combine the results and remove duplicates
+#     combined_matches = list({match['position']: match for match in matches_mbcs + matches_binary}.values())
+
+#     # return sorted(combined_matches)
+#     return sorted(combined_matches, key=lambda x: x['position'])
+
 def combined_search(file_path, text):
     """Perform both mbcs_search and binary_search on the file."""
-    matches_mbcs = mbcs_search(file_path, text)
-    matches_binary = binary_search(file_path, text)
+    try:
+        matches_mbcs = mbcs_search(file_path, text)
 
-    # Combine the results and remove duplicates
-    combined_matches = list({match['position']: match for match in matches_mbcs + matches_binary}.values())
+        # binary_search returns strings, not dictionaries with 'position' key
+        # So we need to handle these separately
+        matches_binary = binary_search(file_path, text)
 
-    # return sorted(combined_matches)
-    return sorted(combined_matches, key=lambda x: x['position'])
+        # Just return the formatted matches
+        if matches_mbcs:
+            mbcs_results = [f"UTF-16 Match at position: {match['position']}" for match in matches_mbcs]
+            return mbcs_results + matches_binary
+        else:
+            return matches_binary
+    except Exception as e:
+        return [f"Error in combined_search for {file_path}: {str(e)}"]
 
 
 # .docm
